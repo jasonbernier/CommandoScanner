@@ -18,7 +18,6 @@ CommandoScanner is a command-line tool that accepts various arguments to customi
 ```bash
 python commandoscanner.py --url TARGET_URL --param PARAMETER [--method {GET,POST}] [--proxy PROXY] [--headers HEADERS]
 ```
-
 - - `--url`: The target URL for testing.
 - `--param`: The parameter suspected of vulnerability.
 - `--method`: (Optional) HTTP method for requests (GET or POST). Default is GET.
