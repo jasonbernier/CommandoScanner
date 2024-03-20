@@ -10,6 +10,7 @@ CommandoScanner is a powerful Python-based tool designed for security profession
 - **Interactive Shell**: Engages an interactive shell for real-time exploitation upon detecting a vulnerable endpoint.
 - **Proxy Support**: Routes traffic through a specified proxy server, aiding in anonymity and evasion.
 - **User-Agent Randomization**: Avoids detection by randomizing the user-agent string in each request.
+- **Logging**: Outputs results to a file for further analysis.
 
 ## Usage
 CommandoScanner is a command-line tool that accepts various arguments to customize the testing process:
@@ -18,11 +19,13 @@ CommandoScanner is a command-line tool that accepts various arguments to customi
 python commandoscanner.py --url TARGET_URL --param PARAMETER [--method {GET,POST}] [--proxy PROXY] [--headers HEADERS]
 ```
 
-- `--url`: The target URL to test.
-- `--param`: The parameter suspected of being vulnerable to command injection.
-- `--method`: Optional. Specify 'GET' or 'POST' for the request method. Defaults to 'GET'.
-- `--proxy`: Optional. Set a proxy server (e.g., 'http://127.0.0.1:8080').
-- `--headers`: Optional. Add custom headers in JSON format (e.g., '{"Authorization": "Bearer XYZ"}').
+- - `--url`: The target URL for testing.
+- `--param`: The parameter suspected of vulnerability.
+- `--method`: (Optional) HTTP method for requests (GET or POST). Default is GET.
+- `--proxy`: (Optional) Proxy server in http://127.0.0.1:8080 format.
+- `--headers`: (Optional) JSON string of custom headers.
+- `--dynamic`: (Optional) Enable dynamic payload generation.
+- `--output`: (Optional) File to write the results to.
 
 ### Example Commands
 Testing with a GET request and custom headers:
